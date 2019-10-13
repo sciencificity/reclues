@@ -28,16 +28,16 @@ The goal of reclues is to provide the datasets and some cheatsheet tidyverse com
 # The datasets
 The datasets should be available as soon as you install the package. These are the datasets available and the data contained within them.
 
-|  Table Name|  File|  Load with| Note |
-|--:|--:|--:|--:|
-|  crime_scene_report|  crime_scene_report.rda|  load(file = "crime_scene_report.rda")| date, type, description, city; 1,228 rows|
-|  drivers_license|  drivers_license.rda|  load(file = "drivers_license.rda")| id, age, height, eye_color, hair_color, gender, plate_number, car_make, car_model; 10,007 rows|
-|  facebook_event_checkin|  facebook_event_checkin.rda|  load(file = "facebook_event_checkin.rda")| person_id, event_id, event_name, date; 20,011 rows|
-|  get_fit_now_check_in|  get_fit_now_check_in.rda|  load(file = "get_fit_now_check_in.rda")| membership_id, check_in_date, check_in_time, check_out_time; 2,703 rows|
-|  get_fit_now_member|  get_fit_now_member.rda|  load(file = "get_fit_now_member.rda")| id, person_id, name, membership_start_date, membership_status; 184 rows|
-|  income|  income.rda|  load(file = "income.rda")| ssn, annual_income; 7,514 rows|
-|  interview|  interview.rda|  load(file = "interview.rda")| person_id, transcript; 4,991 rows|
-|  person|  person.rda|  load(file = "person.rda")| id, name, license_id, address_number, address_street_name, ssn; 10,011 rows|
+|  Table Name|  Fields | Rows |
+|:--:|:--|--:|
+|  _crime_scene_report_| date, type, description, city| 1,228 rows|
+|  _drivers_license_|  id, age, height, eye_color, hair_color, gender, plate_number, car_make, car_model| 10,007 rows|
+|  _facebook_event_checkin_|  person_id, event_id, event_name, date| 20,011 rows|
+|  _get_fit_now_check_in_|  membership_id, check_in_date, check_in_time, check_out_time| 2,703 rows|
+|  _get_fit_now_member_|  id, person_id, name, membership_start_date, membership_status| 184 rows|
+|  _income_|  ssn, annual_income| 7,514 rows|
+|  _interview_|  person_id, transcript| 4,991 rows|
+|  _person_|  id, name, license_id, address_number, address_street_name, ssn| 10,011 rows|
 
 
 ## Installation

@@ -26,16 +26,16 @@ tidyverse commands for solving the mystery.
 The datasets should be available as soon as you install the package.
 These are the datasets available and the data contained within them.
 
-|               Table Name |                         File |                                   Load with |                                                                                                Note |
-| -----------------------: | ---------------------------: | ------------------------------------------: | --------------------------------------------------------------------------------------------------: |
-|     crime\_scene\_report |     crime\_scene\_report.rda |     load(file = “crime\_scene\_report.rda”) |                                                           date, type, description, city; 1,228 rows |
-|         drivers\_license |         drivers\_license.rda |         load(file = “drivers\_license.rda”) | id, age, height, eye\_color, hair\_color, gender, plate\_number, car\_make, car\_model; 10,007 rows |
-| facebook\_event\_checkin | facebook\_event\_checkin.rda | load(file = “facebook\_event\_checkin.rda”) |                                               person\_id, event\_id, event\_name, date; 20,011 rows |
-| get\_fit\_now\_check\_in | get\_fit\_now\_check\_in.rda | load(file = “get\_fit\_now\_check\_in.rda”) |                      membership\_id, check\_in\_date, check\_in\_time, check\_out\_time; 2,703 rows |
-|    get\_fit\_now\_member |    get\_fit\_now\_member.rda |    load(file = “get\_fit\_now\_member.rda”) |                         id, person\_id, name, membership\_start\_date, membership\_status; 184 rows |
-|                   income |                   income.rda |                   load(file = “income.rda”) |                                                                     ssn, annual\_income; 7,514 rows |
-|                interview |                interview.rda |                load(file = “interview.rda”) |                                                                  person\_id, transcript; 4,991 rows |
-|                   person |                   person.rda |                   load(file = “person.rda”) |                     id, name, license\_id, address\_number, address\_street\_name, ssn; 10,011 rows |
+|         Table Name         | Fields                                                                                 |        Rows |
+| :------------------------: | :------------------------------------------------------------------------------------- | ----------: |
+|   *crime\_scene\_report*   | date, type, description, city                                                          |  1,228 rows |
+|     *drivers\_license*     | id, age, height, eye\_color, hair\_color, gender, plate\_number, car\_make, car\_model | 10,007 rows |
+| *facebook\_event\_checkin* | person\_id, event\_id, event\_name, date                                               | 20,011 rows |
+| *get\_fit\_now\_check\_in* | membership\_id, check\_in\_date, check\_in\_time, check\_out\_time                     |  2,703 rows |
+|  *get\_fit\_now\_member*   | id, person\_id, name, membership\_start\_date, membership\_status                      |    184 rows |
+|          *income*          | ssn, annual\_income                                                                    |  7,514 rows |
+|        *interview*         | person\_id, transcript                                                                 |  4,991 rows |
+|          *person*          | id, name, license\_id, address\_number, address\_street\_name, ssn                     | 10,011 rows |
 
 ## Installation
 
