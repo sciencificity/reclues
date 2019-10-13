@@ -1,0 +1,15 @@
+Package: reclues
+Type: Package
+Title: Learn dplyr and other tidyverse functions by solving a murder mystery
+Version: 0.1.0
+Authors@R: person("Vebash", "Naidoo", 
+    email = "sciencificity@gmail.com", role = c("aut", "cre"))
+Description: Northwestern University Knight Lab (@knightlab) created a SQL murder mystery to
+    help beginners and experienced SQL learners to sharpen their SQL skills through solving the 
+    crime that happened at SQL City. This package loads the data for you to similarly
+    solve the mystery using tidyverse tools in order to learn that.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Depends: R (>= 3.3.0)
