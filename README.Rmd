@@ -1,0 +1,115 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# reclues
+The `reclues` package mimics the SQL Murder Mystery done by [Northwestern's Knight's Lab](https://github.com/NUKnightLab/sql-mysteries) - this uses SQL to solve the mystery. A brief of the task at hand is given in the [walkthrough](http://mystery.knightlab.com/walkthrough.html). 
+
+Want to play the SQL version of the game [online](https://sql-murder-mystery.datasette.io/sql-murder-mystery)?
+
+This R package is set up to import the data as R datasets. 
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of reclues is to provide the datasets and some cheatsheet tidyverse commands for solving the mystery.
+
+# The datasets
+The datasets should be available as soon as you install the package. These are the datasets available and the data contained within them.
+
+|  Table Name|  File|  Load with| Note |
+|--:|--:|--:|--:|
+|  crime_scene_report|  crime_scene_report.rda|  load(file = "crime_scene_report.rda")| date, type, description, city; 1,228 rows|
+|  drivers_license|  drivers_license.rda|  load(file = "drivers_license.rda")| id, age, height, eye_color, hair_color, gender, plate_number, car_make, car_model; 10,007 rows|
+|  facebook_event_checkin|  facebook_event_checkin.rda|  load(file = "facebook_event_checkin.rda")| person_id, event_id, event_name, date; 20,011 rows|
+|  get_fit_now_check_in|  get_fit_now_check_in.rda|  load(file = "get_fit_now_check_in.rda")| membership_id, check_in_date, check_in_time, check_out_time; 2,703 rows|
+|  get_fit_now_member|  get_fit_now_member.rda|  load(file = "get_fit_now_member.rda")| id, person_id, name, membership_start_date, membership_status; 184 rows|
+|  income|  income.rda|  load(file = "income.rda")| ssn, annual_income; 7,514 rows|
+|  interview|  interview.rda|  load(file = "interview.rda")| person_id, transcript; 4,991 rows|
+|  person|  person.rda|  load(file = "person.rda")| id, name, license_id, address_number, address_street_name, ssn; 10,011 rows|
+
+
+## Installation
+
+You can install the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("sciencificity/reclues")
+```
+
+## Some useful functions to view the data
+
+```{r view, warning=FALSE, message=FALSE}
+library(reclues)
+library(dplyr)
+## basic example code
+head(crime_scene_report)
+glimpse(crime_scene_report)
+```
+
+## Some useful functions to explore the data
+
+### Distinct
+Let's say we wanted to see the different __types__ of criminal activity the reports document ....
+The `type` field in the crime scene reports table seems to contain this info. We will use the `distinct` function from `dplyr`.
+
+SQL Equivalent is: 
+
+> `SELECT DISTINCT(type) FROM crime_scene_report`
+
+
+```{r explore, warning=FALSE, message=FALSE}
+library(magrittr)
+
+# the magrittr package contains the pipe %>% function
+# Take the crime scene report data AND THEN
+# give me the distinct values for the `type` variable.
+crime_scene_report %>% 
+    distinct(type)
+```
+
+### Count Distinct
+Let's say we were wondering which city has the highest number of crimes ...
+
+SQL Equivalent is:
+
+> SELECT city, count(city) AS n  
+> FROM crime_scene_report  
+> GROUP BY city  
+> ORDER BY n DESC  
+
+
+```{r explore2}
+crime_scene_report %>% 
+    count(city) %>% 
+    arrange(desc(n))
+```
+Hhmmm looks like SQL City is quite notorious for crime!
+
+### Like
+Let's say we're interested in finding the people that start with a __Z__. We will use the `stringr` package for this. The `str_detect()` function can be used in conjunction with regular expressions - here we looking for names that start with __`(^)`__ __Z__.
+
+SQL Equivalent is:
+
+> SELECT * FROM person  
+> WHERE name LIKE 'Z%'  
+
+
+```{r like, warning=FALSE, message=FALSE}
+library(stringr)
+person %>% filter(stringr::str_detect(name, "^Z"))
+```
+
+

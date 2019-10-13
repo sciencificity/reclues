@@ -1,13 +1,16 @@
 Package: reclues
 Type: Package
-Title: Learn dplyr and other tidyverse functions by solving a murder mystery
+Title: Learn R functions by solving a murder mystery
 Version: 0.1.0
 Authors@R: person("Vebash", "Naidoo", 
     email = "sciencificity@gmail.com", role = c("aut", "cre"))
 Description: Northwestern University Knight Lab (@knightlab) created a SQL murder mystery to
     help beginners and experienced SQL learners to sharpen their SQL skills through solving the 
     crime that happened at SQL City. This package loads the data for you to similarly
-    solve the mystery using tidyverse tools in order to learn that.
+    solve the mystery using R tools in order to learn. The README file is particular to
+    the tidyverse tools that can aid in solving the mystery but please feel free to pick
+    a learning path and try using that tool - perhaps you want to learn data.table, or base R, 
+    try it and if you'd like consider submitting a "cheatsheet" for that tool!
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
