@@ -3,7 +3,7 @@
 
 # reclues
 
-<img src = "./1.png" width = 300px>
+<img src="./man/figures/1.PNG" width = 300px />
 
 The **`reclues`** package mimics the SQL Murder Mystery done by
 [Northwestern’s Knight’s

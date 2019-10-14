@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 
 # reclues
 
-<img src = "./1.png" width = 300px>
+<img src="./man/figures/1.PNG" width = 300px /> 
 
 The __`reclues`__ package mimics the SQL Murder Mystery done by [Northwestern's Knight's Lab](https://github.com/NUKnightLab/sql-mysteries) - this uses SQL to solve the mystery. A brief of the task at hand is given in the [walkthrough](http://mystery.knightlab.com/walkthrough.html). Want to play the SQL version of the game online? [Here it is](https://sql-murder-mystery.datasette.io/sql-murder-mystery)!
 
