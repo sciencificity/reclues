@@ -3,23 +3,23 @@
 
 # reclues
 
-The `reclues` package mimics the SQL Murder Mystery done by
+<img src = "./1.png" width = 300px>
+
+The **`reclues`** package mimics the SQL Murder Mystery done by
 [Northwestern’s Knight’s
 Lab](https://github.com/NUKnightLab/sql-mysteries) - this uses SQL to
 solve the mystery. A brief of the task at hand is given in the
-[walkthrough](http://mystery.knightlab.com/walkthrough.html).
-
-Want to play the SQL version of the game
-[online](https://sql-murder-mystery.datasette.io/sql-murder-mystery)?
-
-This R package is set up to import the data as R datasets.
+[walkthrough](http://mystery.knightlab.com/walkthrough.html). Want to
+play the SQL version of the game online? [Here it
+is](https://sql-murder-mystery.datasette.io/sql-murder-mystery)\!
 
 <!-- badges: start -->
 
 <!-- badges: end -->
 
-The goal of reclues is to provide the datasets and some cheatsheet
-tidyverse commands for solving the mystery.
+The goal of reclues is to provide the datasets from the SQL Challenge
+within R, and some cheatsheet tidyverse commands for getting you on your
+way to solving the mystery.
 
 # The datasets
 

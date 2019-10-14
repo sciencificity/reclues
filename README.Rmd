@@ -14,16 +14,15 @@ knitr::opts_chunk$set(
 ```
 
 # reclues
-The `reclues` package mimics the SQL Murder Mystery done by [Northwestern's Knight's Lab](https://github.com/NUKnightLab/sql-mysteries) - this uses SQL to solve the mystery. A brief of the task at hand is given in the [walkthrough](http://mystery.knightlab.com/walkthrough.html). 
 
-Want to play the SQL version of the game [online](https://sql-murder-mystery.datasette.io/sql-murder-mystery)?
+<img src = "./1.png" width = 300px>
 
-This R package is set up to import the data as R datasets. 
+The __`reclues`__ package mimics the SQL Murder Mystery done by [Northwestern's Knight's Lab](https://github.com/NUKnightLab/sql-mysteries) - this uses SQL to solve the mystery. A brief of the task at hand is given in the [walkthrough](http://mystery.knightlab.com/walkthrough.html). Want to play the SQL version of the game online? [Here it is](https://sql-murder-mystery.datasette.io/sql-murder-mystery)!
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of reclues is to provide the datasets and some cheatsheet tidyverse commands for solving the mystery.
+The goal of reclues is to provide the datasets from the SQL Challenge within R, and some cheatsheet tidyverse commands for getting you on your way to solving the mystery.
 
 # The datasets
 The datasets should be available as soon as you install the package. These are the datasets available and the data contained within them.
