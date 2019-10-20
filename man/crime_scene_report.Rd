@@ -5,26 +5,29 @@
 \alias{crime_scene_report}
 \title{Crime scene report}
 \format{A data set with four variables: \code{date}, \code{type},
-  \code{description} and \code{city}.}
+  \code{description} and \code{city}.
+\describe{
+\item{date}{Incident date of form `YYYYMMDD`}
+\item{type}{Incident type category - robbery, murder etc.}
+\item{description}{More verbose description of crime}
+\item{city}{Where did the incident occur?}
+}}
 \usage{
 crime_scene_report
 }
 \description{
-Data for the crime scene as per the [SQL Murder](http://mystery.knightlab.com/walkthrough.html)
-and [here] (https://github.com/NUKnightLab/sql-mysteries). Simon Willison made an online version
-of the SQL game [here](https://sql-murder-mystery.datasette.io/sql-murder-mystery).
+Data for the crime scene as per the SQL Murder (http://mystery.knightlab.com/walkthrough.html)
+and here (https://github.com/NUKnightLab/sql-mysteries). Simon Willison made an online version
+of the SQL game (https://sql-murder-mystery.datasette.io/sql-murder-mystery).
 }
 \details{
 \bold{How to play the game ....}
 
-Data for the crime scene as per the [SQL Murder](http://mystery.knightlab.com/walkthrough.html)
-and [here] (https://github.com/NUKnightLab/sql-mysteries). Simon Willison made an online version
-of the SQL game [here](https://sql-murder-mystery.datasette.io/sql-murder-mystery). This
-package makes that data available. \cr\cr
+This package makes the data of the SQL Murder Mystery available in R. \cr\cr
 There's been a Murder in SQL City!
 The Murder Mystery is designed to be both a self-directed lesson to
 learn R concepts and is also a fun game for experienced R users to solve an intriguing crime.
-Please read  \bold{game_prompt.pdf} for the details!
+Please read the \bold{Readme file} for the details!
 }
 \examples{
 # Load a bit of the dataset: crime_scene_report

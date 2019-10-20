@@ -10,9 +10,18 @@
 get_fit_now_member
 }
 \description{
-Data for the Fit Now members [SQL Murder](http://mystery.knightlab.com/walkthrough.html)
-and [here] (https://github.com/NUKnightLab/sql-mysteries). Simon Willison made an online version
-of the SQL game [here](https://sql-murder-mystery.datasette.io/sql-murder-mystery).
+Data for the Fit Now members as per the SQL Murder (http://mystery.knightlab.com/walkthrough.html)
+and here (https://github.com/NUKnightLab/sql-mysteries). Simon Willison made an online version
+of the SQL game (https://sql-murder-mystery.datasette.io/sql-murder-mystery).
+}
+\details{
+\bold{How to play the game ....}
+
+This package makes the data of the SQL Murder Mystery available in R. \cr\cr
+There's been a Murder in SQL City!
+The Murder Mystery is designed to be both a self-directed lesson to
+learn R concepts and is also a fun game for experienced R users to solve an intriguing crime.
+Please read the \bold{Readme file} for the details!
 }
 \examples{
 # Load a bit of the dataset: get_fit_now_member
