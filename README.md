@@ -1841,6 +1841,17 @@ version](https://sql-murder-mystery.datasette.io/sql-murder-mystery):
 
 -----
 
+# Think you solved it?
+
+Head over to [‘The SQL Murder Mystery
+Page’](http://mystery.knightlab.com/) OR [‘The SQL Murder Mystery
+Walkthrough’](http://mystery.knightlab.com/walkthrough.html) to check
+your solution\! At the bottom of both pages there is a **`Check your
+solution`** section where you enter the name of the individual you
+suspect committed the crime.
+
+-----
+
 # Resources for learning
 
 ## SQL

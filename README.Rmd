@@ -293,6 +293,12 @@ Here's a snippet from the [online SQL version](https://sql-murder-mystery.datase
 <img src="./man/figures/join.PNG" width = 900px /> 
 
 ------
+
+# Think you solved it?
+
+Head over to ['The SQL Murder Mystery Page'](http://mystery.knightlab.com/) OR ['The SQL Murder Mystery Walkthrough'](http://mystery.knightlab.com/walkthrough.html) to check your solution! At the bottom of both pages there is a __`Check your solution`__ section where you enter the name of the individual you suspect committed the crime.
+
+------
 # Resources for learning
 
 ## SQL
