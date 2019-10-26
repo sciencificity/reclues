@@ -1,3 +1,6 @@
+#' @importFrom tibble tibble
+NULL
+
 #' Crime scene report
 #'
 #' Data for the crime scene as per the SQL Murder (http://mystery.knightlab.com/walkthrough.html)
@@ -182,3 +185,4 @@
 #' @format A empty data set with two variables: \code{user} and \code{value}. The data should be inserted as
 #' (1, "Name of criminal") once you have cracked the puzzle.
 "solution"
+

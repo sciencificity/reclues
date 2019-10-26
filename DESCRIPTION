@@ -16,3 +16,10 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
 Depends: R (>= 3.3.0)
+Imports: 
+    DBI,
+    RSQLite,
+    tibble
+Collate: 
+    'data.R'
+    'create_db.R'
