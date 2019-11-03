@@ -23,3 +23,14 @@ Imports:
 Collate: 
     'data.R'
     'create_db.R'
+Suggests: 
+    testthat (>= 2.1.0),
+    knitr,
+    rmarkdown,
+    skimr,
+    magrittr,
+    dplyr,
+    stringr,
+    dbplyr,
+    formattable
+VignetteBuilder: knitr

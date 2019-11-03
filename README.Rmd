@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 ```
 
 # reclues
+## Learn new skills while solving a mystery
 
 <img src="./man/figures/1.PNG" width = 300px /> 
 
@@ -23,7 +24,7 @@ The __`reclues`__ package mimics the SQL Murder Mystery done by [Northwestern's 
 
 A brief of the task at hand is given in their [walkthrough](http://mystery.knightlab.com/walkthrough.html). Want to play the SQL version of the game online? [Here it is](https://sql-murder-mystery.datasette.io/sql-murder-mystery) courtesy of Simon Willison!
 
-# Murder Mystery Prompt (@knightlab)
+# Getting Started: Murder Mystery Prompt (@knightlab)
 ## Whodunnit??
 A crime has taken place and the detective needs your help. The detective gave you the crime scene report,
 but you somehow lost it. You vaguely remember that the crime was a murder that occurred sometime on
@@ -41,6 +42,7 @@ include data.table etc. in future.
 Have fun!
 
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.org/sciencificity/reclues.svg?branch=master)](https://travis-ci.org/sciencificity/reclues)
 <!-- badges: end -->
 
 The goal of reclues is to provide the datasets from the SQL Challenge mentioned above within R, and some `cheatsheet` tidyverse commands for getting you on your way to solving the mystery.
@@ -87,6 +89,11 @@ glimpse(crime_scene_report)
 # Want to see how many reports of each incident type we have?
 table(crime_scene_report$type)
 ```
+
+Other great packages to explore your data are `DataExplorer` and `skimr`. 
+
+- __DataExplorer's__`create_report(dataset)` creates an html report with summary stats, missing data, graphs of categorical data etc. 
+- __skimr's__ `skim(dataset)` creates a nice summary of your dataset separating the different types of data allowing you to look at summary stats by data type.
 
 ## Some useful functions to explore the data
 
@@ -291,6 +298,9 @@ person %>%
 Here's a snippet from the [online SQL version](https://sql-murder-mystery.datasette.io/sql-murder-mystery):
 
 <img src="./man/figures/join.PNG" width = 900px /> 
+
+------
+### 
 
 ------
 

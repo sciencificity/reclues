@@ -22,21 +22,27 @@
 #     DBI::dbDisconnect(con)
 # }
 
-#' A sample sqlite database
+#' The sqlite database for the SQL Murder Mystery
 #'
 #' This database is bundled with the package, and contains all data frames
-#' in the datasets package.
+#' in the reclues package. If called it returns the connection to the SQLite DB
+#' which can then be used to get more information, run queries etc.
+#' @return A connection to the sql-murder-mystery.db which is a SQLite database provided by `@knightlab`
 #' @importFrom DBI dbConnect
 #' @importFrom RSQLite SQLite
 #' @export
 #' @examples
 #' library(DBI)
+#' library(dplyr)
 #' db <- reclues::get_db()
-#' dbListTables(db)
+#' DBI::dbListTables(db)
 #'
-#' dbGetQuery(db, "SELECT * FROM crime_scene_report LIMIT 10")
+#' DBI::dbGetQuery(db, "SELECT * FROM crime_scene_report LIMIT 10")
 #'
-#' dbDisconnect(db)
+#' # Use dplyr to connect to the database and view a few of the entries in the table
+#' dplyr::tbl(db, "crime_scene_report")
+#'
+#' DBI::dbDisconnect(db)
 get_db <- function() {
     DBI::dbConnect(RSQLite::SQLite(), system.file("db", "sql-murder-mystery.db", package = "reclues"))
 }

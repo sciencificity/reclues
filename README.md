@@ -3,6 +3,8 @@
 
 # reclues
 
+## Learn new skills while solving a mystery
+
 <img src="./man/figures/1.PNG" width = 300px />
 
 The **`reclues`** package mimics the SQL Murder Mystery done by
@@ -17,7 +19,7 @@ play the SQL version of the game online? [Here it
 is](https://sql-murder-mystery.datasette.io/sql-murder-mystery) courtesy
 of Simon Willison\!
 
-# Murder Mystery Prompt (@knightlab)
+# Getting Started: Murder Mystery Prompt (@knightlab)
 
 ## Whodunnit??
 
@@ -41,6 +43,8 @@ in future. Have fun\!
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.org/sciencificity/reclues.svg?branch=master)](https://travis-ci.org/sciencificity/reclues)
 <!-- badges: end -->
 
 The goal of reclues is to provide the datasets from the SQL Challenge
@@ -52,7 +56,8 @@ getting you on your way to solving the mystery.
 ## The datasets
 
 The datasets will be available as soon as you install the package. These
-are the datasets available and the data contained within them.
+are the datasets available and the data contained within
+them.
 
 |         Table Name         | Fields                                                                                 |        Rows |
 | :------------------------: | :------------------------------------------------------------------------------------- | ----------: |
@@ -112,6 +117,15 @@ table(crime_scene_report$type)
 #> smuggling     theft 
 #>       117       141
 ```
+
+Other great packages to explore your data are `DataExplorer` and
+`skimr`.
+
+  - **DataExplorer’s**`create_report(dataset)` creates an html report
+    with summary stats, missing data, graphs of categorical data etc.
+  - **skimr’s** `skim(dataset)` creates a nice summary of your dataset
+    separating the different types of data allowing you to look at
+    summary stats by data type.
 
 ## Some useful functions to explore the data
 
@@ -1839,7 +1853,9 @@ version](https://sql-murder-mystery.datasette.io/sql-murder-mystery):
 
 <img src="./man/figures/join.PNG" width = 900px />
 
------
+|        |
+| :----- |
+| \#\#\# |
 
 # Think you solved it?
 

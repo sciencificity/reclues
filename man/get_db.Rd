@@ -2,20 +2,28 @@
 % Please edit documentation in R/create_db.R
 \name{get_db}
 \alias{get_db}
-\title{A sample sqlite database}
+\title{The sqlite database for the SQL Murder Mystery}
 \usage{
 get_db()
 }
+\value{
+A connection to the sql-murder-mystery.db which is a SQLite database provided by `@knightlab`
+}
 \description{
 This database is bundled with the package, and contains all data frames
-in the datasets package.
+in the reclues package. If called it returns the connection to the SQLite DB
+which can then be used to get more information, run queries etc.
 }
 \examples{
 library(DBI)
+library(dplyr)
 db <- reclues::get_db()
-dbListTables(db)
+DBI::dbListTables(db)
 
-dbGetQuery(db, "SELECT * FROM crime_scene_report LIMIT 10")
+DBI::dbGetQuery(db, "SELECT * FROM crime_scene_report LIMIT 10")
 
-dbDisconnect(db)
+# Use dplyr to connect to the database and view a few of the entries in the table
+dplyr::tbl(db, "crime_scene_report")
+
+DBI::dbDisconnect(db)
 }
