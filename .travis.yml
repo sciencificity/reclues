@@ -1,18 +1,34 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
+before_install:
+  - R -q -e 'if (!requireNamespace("remotes")) install.packages("remotes")'
+
 language: R
 cache: packages
 sudo: false
 
-os:
-  - linux
-  - osx
+# Follow the ropenscilabs travis.yml
+stages:
+- name: test
+- name: full
+  if: branch = master
 
-matrix:
+#jobs: 4x Linux (1x with deployment), 1x OSX
+jobs:
   include:
-  - r: devel
-  - r: release
-  - r: oldrel
+  - stage: test
+    r: devel
+  - stage: full
+    r: release
+    env:
+    - BUILD_PKGDOWN=true
+  - os: osx
+    r: release
+    env:
+      - BUILD_PKGDOWN=true
+  - r: 3.5
   - r: 3.4
   - r: 3.3
-  - r: 3.2
+
+matrix:
+    fast_finish: true
