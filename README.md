@@ -70,6 +70,16 @@ them.
 |        *interview*         | person\_id, transcript                                                                 |  4,991 rows |
 |          *person*          | id, name, license\_id, address\_number, address\_street\_name, ssn                     | 10,011 rows |
 
+## SQLite DB
+
+The raw SQLite database as per @knightlab is also available through the
+`get_db()` function. To use the SQLite DB for your investigation you
+will need the DBI package.
+
+``` r
+install.packages("DBI")
+```
+
 ## Installation
 
 You can install the development version from
@@ -1853,11 +1863,11 @@ version](https://sql-murder-mystery.datasette.io/sql-murder-mystery):
 
 <img src="./man/figures/join.PNG" width = 900px />
 
-|        |
-| :----- |
-| \#\#\# |
+-----
 
 # Think you solved it?
+
+## Check via @knightlab’s `Solution Checker`
 
 Head over to [‘The SQL Murder Mystery
 Page’](http://mystery.knightlab.com/) OR [‘The SQL Murder Mystery
@@ -1865,6 +1875,28 @@ Walkthrough’](http://mystery.knightlab.com/walkthrough.html) to check
 your solution\! At the bottom of both pages there is a **`Check your
 solution`** section where you enter the name of the individual you
 suspect committed the crime.
+
+## Check in R
+
+Run the following commands in R once you think you’ve solved the
+problem. You will need the DBI package and if you’ve been using the
+datasets to solve the mystery and not the SQLite database (i.e. the
+individual dataframes of `person`, `drivers_license` etc.) then
+uncomment the first line to make a connection to the database, run the
+queries below after you’ve put in the culprit you suspect, and then
+disconnect from the database.
+
+``` r
+conn <- reclues::get_db()
+
+# Replace 'Insert the name of the person you found here' with the name of the individual you found.
+DBI::dbExecute(conn, "INSERT INTO solution VALUES (1, 'Insert the name of the person you found here')")
+
+# Did we solve it? You'll either get a "That's not the right person." or a "Congrats,..." message.
+DBI::dbGetQuery(conn, "SELECT value FROM solution;")
+
+DBI::dbDisconnect(conn)
+```
 
 -----
 
@@ -1893,3 +1925,6 @@ suspect committed the crime.
   - [Cheatsheets](https://rstudio.com/resources/cheatsheets/)
   - [Loads of other
     resources](https://github.com/Chris-Engelhardt/data_sci_guide)
+  - For
+    [DB](https://cran.r-project.org/web/packages/dbplyr/vignettes/dbplyr.html)
+    interaction via R using dbplyr.
