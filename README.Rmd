@@ -47,6 +47,8 @@ Have fun!
 
 The goal of reclues is to provide the datasets from the SQL Challenge mentioned above within R, and some `cheatsheet` tidyverse commands for getting you on your way to solving the mystery.
 
+Please see the [reclues package site](https://sciencificity.github.io/reclues/) for how to use the package, as well as the vignette included in the `Get Started` section which contains info on using the actual sqlite database included in the package.
+
 ------
 
 ## The datasets
