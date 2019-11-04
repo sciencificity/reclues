@@ -6,6 +6,7 @@ before_install:
 language: R
 cache: packages
 sudo: false
+latex: false
 
 # Follow the ropenscilabs travis.yml
 stages:
